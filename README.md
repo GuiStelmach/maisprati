@@ -1,5 +1,13 @@
 ![MaisPraTI](https://media.licdn.com/dms/image/v2/C4D1BAQE-hgWmZw6vMQ/company-background_10000/company-background_10000/0/1594408985136/maisprati_cover?e=2147483647&v=beta&t=O6ZZa3jETSjW2xJveLKOoowLAMpnPwwJLePTvaOoYVw)
 
+![Fullstack Junior +praTi](https://img.shields.io/badge/Fullstack-Development-blueviolet)
+![Javascript](https://shields.io/badge/JavaScript-F7DF1E)
+![Java](https://img.shields.io/badge/Java-007396)
+![React](https://img.shields.io/badge/React-61DAFB)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F)
+
 # 💻Trilha Desenvolvedor FullStack Jr - Grupo +PraTi e Codifica - Turma 2(2024)
 
 +PraTi é um movimento da sociedade, sem fins lucrativos, que busca encontrar e capacitar novos talentos da área de TI. Um movimento para criar novas oportunidades na economia e transformar o modo como a tecnologia é vista pelas pessoas.
