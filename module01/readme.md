@@ -24,7 +24,7 @@ Siga os passos abaixo para clonar o repositório e instalar as dependências nec
 
 Abra um terminal e navegue até o diretório onde deseja clonar o repositório. Execute o seguinte comando para clonar o repositório:
 
-   git clone https://github.com/GuiStelmach/maisprati.git
+    git clone https://github.com/GuiStelmach/maisprati.git
 
 
 2. **Acesse o diretório do repositório clonado**
