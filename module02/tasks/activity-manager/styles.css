@@ -1,0 +1,116 @@
+/* Utilizei a paleta de cores disponivel em 
+https://paletadecores.com/paleta/f2eabc/54736e/194756/080000/ff3b58/ */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2eabc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+    border: 2px solid #194756;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #080000;
+}
+
+.controleTarefas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #194756;
+    border-radius: 5px;
+    background-color: #f2eabc;
+    color: #080000;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #54736e;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #194756;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #194756;
+    background-color: #f2eabc;
+    color: #080000;
+}
+
+#listaTarefas {
+    list-style: none;
+    padding: 0;
+}
+
+.tarefa {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #194756;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.tarefaConcluida {
+    text-decoration: line-through;
+    color: #54736e;
+}
+
+.botoesTarefa {
+    display: flex;
+    gap: 2px;
+}
+
+.botaoEditar {
+    background-color: #54736e;
+}
+
+.botaoEditar:hover {
+    background-color: #194756;
+}
+
+.botaoDeletar {
+    background-color: #ff3b58;
+}
+
+.botaoDeletar:hover {
+    background-color: #c82333;
+}
+
+.botaoConcluir {
+    background-color: #54736e;
+}
+
+.botaoConcluir:hover {
+    background-color: #194756;
+}

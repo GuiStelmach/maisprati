@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Gerenciador de Tarefas</h1>
+        
+        <div class="controleTarefas">
+            <input type="text" id="novaTarefa" placeholder="Adicione uma nova tarefa">
+            <button id="adicionarBtn">Adicionar</button>
+
+            <select id="filtro">
+                <option value="todas">Todas</option>
+                <option value="concluidas">Concluídas</option>
+                <option value="pendentes">Pendentes</option>
+            </select>
+            <button id="filtrarBtn">Filtrar</button>
+        </div>
+
+        <ul id="listaTarefas"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
