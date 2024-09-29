@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Browser Object Model</h1>
+    </header>
+    <section class="container">
+        <div class="title-body">
+            <h3>Contador</h3>
+            <div class="display" id="display">
+                <p id="result">0</p>
+            </div>
+        </div>
+        <div class="btn-atcions">
+            <button onclick="startTimer()">Iniciar Contagem</button>
+            <button onclick="changeText()">Mudar Texto</button>
+            <button onclick="reditectLink()">Redirecionar Site</button>
+            <br>
+            <button onclick="backHistory()">Pagina Anterior</button>            
+            <button onclick="nextHistory()">Pagina Seguinte</button>            
+        </div>
+        <div class="legend-btns">
+            <table>
+                <tr>
+                  <td><p class="legend-text"><span class="negrito">Iniciar Contagem:</span></p></td>
+                  <td><p>Inicia uma contagem de 0 até 10.</p></td>
+                </tr>
+                <tr>
+                    <td><p class="legend-text"><span class="negrito">Mudar Texto:</span></p></td>
+                    <td><p>Altera o texto do header após 3 segundos.</p></td>
+                </tr>
+                <tr>
+                    <td><p class="legend-text"><span class="negrito">Redirecionar Site:</span></p></td>
+                    <td><p>Redireciona você para um site diferente.</p></td>
+                </tr>
+                <tr>
+                    <td><p class="legend-text"><span class="negrito">Pagina Anterior:</span></p></td>
+                    <td>Volta para a página anterior com base no historico.</td>
+                </tr>
+                <tr>
+                    <td><p class="legend-text"><span class="negrito">Pagina Seguinte:</span></p></td>
+                    <td><p>Volta para a página seguinte com base no historico.</p></td>
+                </tr>
+              </table>
+        </div>
+    </section>
+    <footer>
+        By Guilherme Medeiros Stelmah from +praTi
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
