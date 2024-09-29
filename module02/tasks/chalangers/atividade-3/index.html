@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFácil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>WebFácil</h1>
+        <nav>
+            <ul>
+                <li><a href="#html-css">Home</a></li>
+                <li><a href="#sobre-section">Sobre</a></li>
+                <li><a href="#contact-section">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="html-css" id="html-css">
+            <div class="content">
+                <h2>HTML</h2>
+                <p>
+                    O <span class="negrito">HTML (HyperText Markup Language)</span> é a linguagem padrão para criar páginas web. Ele define a
+                    estrutura e
+                    o conteúdo de um site através de marcações, ou tags, como <code>&lt;h1&gt;</code>,
+                    <code>&lt;p&gt;</code> e
+                    <code>&lt;a&gt;</code>, que indicam títulos, parágrafos e links, respectivamente. O HTML organiza o
+                    conteúdo em
+                    uma hierarquia, facilitando a exibição de textos, imagens, vídeos e muito mais.
+                </p>
+                <div class="div-section-img">
+                    <img src="https://via.placeholder.com/400x200" alt="Imagem ilustrativa sobre o site">
+                </div>
+                <div class="div-section-btn">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" class="saiba-mais">Saiba Mais</a>
+                </div>     
+            </div>
+            <div class="content">
+                <h2>CSS</h2>
+                <p>
+                    O <span class="negrito">CSS (Cascading Style Sheets)</span> é a linguagem usada para estilizar e definir o layout de uma página
+                    web.
+                    Ele controla a aparência visual, como cores, espaçamento, fontes e posicionamento dos elementos na
+                    página. O CSS é responsável por deixar o site visualmente agradável
+                    e responsivo, adaptando-se a diferentes telas e dispositivos.
+                </p>
+                <div class="div-section-img">
+                    <img src="https://via.placeholder.com/400x200" alt="Imagem ilustrativa sobre o site">
+                </div>
+                <div class="div-section-btn">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" class="saiba-mais">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Links Relacionados</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">🔗 Javascript Web</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">🔗 APIs da Web</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/WebAssembly">🔗 Assembly</a></li>
+                <li><a href="https://paletadecores.com/populares/">🔗 Paleta de Cores</a></li>
+                <li><a href="https://fonts.google.com">🔗 Fontes</a></li>
+            </ul>
+        </aside>
+
+        <section class="sobre-section" id="sobre-section">
+            <div class="about">
+                <h2>Sobre</h2>
+                <p>
+                    O WebFácil tem como objetivo deixar as explicações sobre a programação web mais simplificada,
+                    facilitando assim o entendimento dos conteúdos por parte dos novos estudantes.
+                </p>
+                <p>
+                    Este site faz parte de uma das atividades da <span class="negrito">Trilha Desenvolvedor Fullstack da +praTi</span> em parceria com a Codifica Edu.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact-section">
+            <div class="contact">
+                <h2>Contato</h2>
+                <form action="contact.html">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="message">Mensagem:</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 WebFácil - by Guilherme Medeiros Stelmach.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* Fontes */
+@font-face {
+    font-family: 'Poppins';
+    /* Nome da fonte que será usada no CSS */
+    src: url('./assets/font/Poppins/Poppins-Regular.ttf') format('truetype'),
+        url('./assets/font/Poppins/Poppins-Regular.ttf') format('truetype');
+    /* Caminho para os arquivos da fonte */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/font/Poppins/Poppins-Bold.ttf') format('truetype'),
+        url('./assets/font/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Geral */
+body {
+    font-family: Poppins;
+    background-color: #fbeed3;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #429398;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dfcdb4;
+}
+
+/* Estilos da área principal */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+section.html-css {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+section.html-css .content {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+section.html-css h2 {
+    color: #429398;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section.html-css p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.div-section-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.div-section-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+section.html-css a.saiba-mais {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6b5d4d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+section.html-css a.saiba-mais:hover {
+    background-color: #b0a18f;
+}
+
+span {
+    font-weight: bolder;
+}
+
+/* Estilos do aside */
+aside {
+    width: 20%;
+    padding: 10px;
+    background-color: #dfcdb4;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+aside h3 {
+    text-align: center;
+    color: #429398;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+aside ul li a {
+    color: #6b5d4d;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: #429398;
+}
+
+/* Estilos da seção sobre */
+.sobre-section {
+    width: 100%;
+    background-color: #dfcdb4;
+    padding: 20px;
+    text-align: center;
+}
+
+.sobre-section h2 {
+    font-size: 2rem;
+    color: #429398;
+}
+
+.sobre-section p {
+    font-size: 1.2rem;
+    color: #6b5d4d;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* Estilos da seção de contato */
+.contact-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #fbeed3;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #429398;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #429398;
+    border-radius: 5px;
+}
+
+.contact-section input[type="submit"] {
+    background-color: #429398;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section input[type="submit"]:hover {
+    background-color: #b0a18f;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #429398;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
