@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3e5d9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: solid 5px #e0d3c7;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        main h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .cep-solicit input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .cep-alert {
+            font-size: 10px;
+            color: red;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .cep-response input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .response {
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        button {
+            border: groove;
+            background-color: #f3e5d9;
+            color: black;
+            font-weight: bolder;
+            border-radius: 10px;
+            padding: 7px;
+            position: relative;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #bbaea2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>Consulta CEP:</h1>
+        <div class="cep-solicit">
+            <input type="text" id="cep" maxlength="8" placeholder="CEP">
+            <p class="cep-alert">Digite um CEP válido com 8 dígitos.</p>
+        </div>
+
+        <div class="cep-response">
+            <input type="text" name="street" id="street" placeholder="Logradouro" readonly>
+            <input type="text" name="district" id="district" placeholder="Bairro" readonly>
+            <input type="text" name="city" id="city" placeholder="Cidade" readonly>
+            <input type="text" name="region" id="region" placeholder="UF" readonly>
+        </div>
+        <p class="response" id="response"></p>
+        <div class="btn">
+            <button onclick="copyAdress()">Copiar</button>
+        </div>
+    </main>
+
+    <script>
+        const zipcode = document.getElementById('cep')
+
+        function cepAlert() {
+            const cepInput = document.getElementById('cep');
+            const cepAlert = document.querySelector('.cep-alert');
+
+            if (cepInput.value.length !== 8 || isNaN(cepInput.value)) {
+                cepAlert.style.display = 'block'; // Exibe a mensagem de alerta
+            } else {
+                cepAlert.style.display = 'none'; // Oculta a mensagem se o CEP for válido
+            }
+        }
+        const cepInput = document.getElementById('cep');
+        cepInput.addEventListener('input', cepAlert); // Monitora o input enquanto o usuário digita
+
+
+
+        async function fetchAddressByCep() {
+            const cep = document.getElementById('cep').value;
+            const cepAlert = document.querySelector('.cep-alert');
+
+            if (cep.length === 8 && !isNaN(cep)) {
+                // Fazendo a requisição à API ViaCEP
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.erro) {
+                            cepAlert.textContent = 'CEP não encontrado!';
+                            cepAlert.style.display = 'block';
+                        } else {
+                            // Atualiza os campos com os dados retornados da API
+                            document.getElementById('street').value = data.logradouro;
+                            document.getElementById('district').value = data.bairro;
+                            document.getElementById('city').value = data.localidade;
+                            document.getElementById('region').value = data.uf;
+
+                            // Atualiza o parágrafo com o endereço completo
+                            const fullAddress = `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}, ${cep}`;
+                            document.querySelector('.response').textContent = fullAddress;
+
+                            cepAlert.style.display = 'none';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao buscar o CEP:', error);
+                        cepAlert.textContent = 'Erro ao buscar o CEP.';
+                        cepAlert.style.display = 'block';
+                    });
+            } else {
+                cepAlert.textContent = 'Digite um CEP válido com 8 dígitos.';
+                cepAlert.style.display = 'block';
+            }
+        }
+
+        // Adicionando o evento 'blur' ao input de CEP
+        cepInput.addEventListener('blur', fetchAddressByCep);
+
+
+        function copyAdress() {
+            const fullAddress = document.querySelector('.response').textContent;
+            console.log(fullAddress)
+            if (fullAddress.length >= 1) {
+                navigator.clipboard.writeText(fullAddress)
+                    .then(() => {
+                        alert('Endereço copiado para a área de transferência!');
+                    })
+                    .catch(err => {
+                        console.error('Falha ao copiar o endereço:', err);
+                    });
+            } else {
+                alert('Nenhum endereço disponível para copiar.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
