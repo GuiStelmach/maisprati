@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Main <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Main</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="listTask.html">Management</a>
@@ -48,7 +48,7 @@
                     <div class="card rounded-3">
                         <div class="card-body p-4">
 
-                            <h4 class="text-center my-3 pb-3">Register Task</h4>
+                            <h4 class="text-center my-3 pb-3">To Do List</h4>
 
                             <form class="row g-3 justify-content-center align-items-center mb-4 pb-2">
                                 <div class="col-md-2 mb-3">
@@ -96,11 +96,23 @@
                                         id="description" />
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init
-                                        class="btn btn-dark" onclick="registerTask()">Save
+                                    <button type="button" class="btn btn-dark" onclick="searchTasks()">Search
                                     </button>
                                 </div>
                             </form>
+
+                            <table class="table mb-4">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listTasks"></tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
