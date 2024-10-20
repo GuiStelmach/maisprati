@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #fff;
+}
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px); /* Movimenta a notificação para baixo quando oculta */
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Traz a notificação para a posição original */
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+
+/* Estilo geral do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os elementos uniformemente */
+    align-items: center;
+    background-color: #F25430;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+/* Estilo da logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo da navbar */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f0a500;
+}
+
+/* Estilo do carrinho */
+.cart {
+    position: relative;
+}
+
+.cart button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    /* Fundo transparente */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart button a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 5px;
+    /* Espaço entre o texto e o ícone */
+}
+
+.cart button svg {
+    margin-right: 5px;
+}
+
+/* Estilo do contador */
+.count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #fcfcfc;
+    color: #F25430;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Estilo da seção do banner */
+
+img {
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+}
+
+.swiper {
+    height: 300px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilização para a seção de produtos */
+
+.category-filter {
+    margin: 20px 0;
+}
+
+#categorySelect {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.products {
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 5px solid #F25430;
+}
+
+/* Lista de produtos */
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cada item de produto */
+.product-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+
+/* Imagem do produto */
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Título do produto */
+.product-item h2 {
+    white-space: nowrap;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Descrição do produto */
+.product-item p {
+    font-size: 0.9rem;
+    height: 3.6em; /* Controla a altura para limitar o número de linhas */
+    line-height: 1.2em; /* Ajusta a altura da linha */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* Preço do produto */
+.product-item span {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+.product-item button {
+    display: inline-block;
+    margin: 10px auto; /* Centraliza o botão horizontalmente */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botões do Carrinho*/
+.add-to-cart,
+.remove-from-cart {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.add-to-cart:hover,
+.remove-from-cart:hover {
+    background-color: #218838;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+
+/* Estilização para a seção "Sobre Nós" */
+.about {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px solid #F25430;
+    /* Borda superior para destaque */
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* Altura da linha para melhor legibilidade */
+    color: #555;
+    max-width: 800px;
+    /* Largura máxima do texto */
+    margin: 0 auto;
+    /* Centraliza o parágrafo */
+}
+
+/* Estilização para a seção de depoimentos */
+.testimony {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    /* Centraliza o conteúdo */
+}
+
+.testimony h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.testimony-list {
+    display: flex;
+    /* Exibe os depoimentos em linha */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem a linha */
+    justify-content: center;
+    /* Centraliza os itens */
+    gap: 20px;
+}
+
+.testimony-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Largura máxima para os itens */
+    transition: transform 0.2s;
+}
+
+.testimony-item:hover {
+    transform: scale(1.05);
+}
+
+.testimony-text {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimony-img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.testimony-author {
+    font-size: 1em;
+    color: #F25430;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #F25430;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
