@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.JPG" alt="Logo da loja">
+            <p>Fakee</p>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#produtos">Produtos</a>
+                </li>
+                <li>
+                    <a href="#depoimentos">Depoimentos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cart">
+            <button>
+                <a href="">Carrinho</a>
+                <div> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor"
+                        class="bi bi-cart2" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                    </svg></div>
+                <p class="count"></p>
+            </button>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="/module02/tasks/chalangers/atividade-4/images/banner1.jpeg"
+                                alt="Cupons disponiveis">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="/module02/tasks/chalangers/atividade-4/images/banner2.jpeg" alt="Semana da moda">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="/module02/tasks/chalangers/atividade-4/images/banner3.jpeg" alt="Moda feminina">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="products" id="produtos">
+        <div class="category-filter">
+            <label for="categorySelect">Filtrar por Categoria:</label>
+            <select id="categorySelect">
+                <option value="all">Todas</option>
+            </select>
+        </div>
+        <div class="products-list">
+            <!-- Os produtos da ShopFake API serão inseridos aqui -->
+        </div>
+    </section>
+    <section class="about" id="sobre">
+        <div class="about-text">
+            <h2>Sobre Nós</h2>
+            <p>Esta loja foi desenvolvida apenas para fins didáticos, sendo uma loja ficticia. Criada em 2024
+                utilizando uma API publica para gerar produtos ficticios.
+                Fico feliz em poder compartilhar com você minha experiência de desenvolvimento web, espero que você
+                goste.
+            </p>
+        </div>
+    </section>
+    <section class="testimony" id="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="testimony-list">
+            <div class="testimony-item">
+                <p class="testimony-text">"A experiência de compra foi incrível! O suporte é excelente."</p>
+                <img class="testimony-img" src="" alt="perfil" id="avatar-1">
+                <h3 class="testimony-author">- João Silva</h3>
+            </div>
+            <div class="testimony-item">
+                <p class="testimony-text">"Adorei os produtos e a rapidez na entrega!"</p>
+                <img class="testimony-img" src="" alt="perfil" id="avatar-2">
+                <h3 class="testimony-author">- Maria Oliveira</h3>
+            </div>
+            <div class="testimony-item">
+                <p class="testimony-text">"Uma loja muito confiável, com ótimos preços."</p>
+                <img class="testimony-img" src="" alt="perfil" id="avatar-3">
+                <h3 class="testimony-author">- Carlos Pereira</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>2024 developed by Guilherme M Stelmach</p>
+    </footer>
+    <div class="notification" id="notification"></div>
+
+    <script>
+        function carregarAvatar(avatarId) {
+            const avatarUrl = 'https://avatar.iran.liara.run/public';
+            document.getElementById(avatarId).src = avatarUrl + '?t=' + new Date().getTime() + Math.random();
+        }
+
+        // Carregar avatares ao iniciar
+        carregarAvatar('avatar-1')
+        carregarAvatar('avatar-2')
+        carregarAvatar('avatar-3')
+    </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/module02/tasks/chalangers/atividade-4/js/script.js"></script>
+    <script src="/module02/tasks/chalangers/atividade-4/js/store.js"></script>
+</body>
+
+</html>
