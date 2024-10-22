@@ -1,0 +1,422 @@
+/* Importando a fonte Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* Notificação */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px); /* Movimenta a notificação para baixo quando oculta */
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Traz a notificação para a posição original */
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+/* Style Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #F25430;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .logo p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header .navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin-left: 20px;
+}
+
+header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header .navbar ul li a:hover {
+    color: #F2DB66;
+}
+
+header .cart button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .cart button svg {
+    margin-right: 5px;
+}
+
+header .cart button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+header .cart button:hover a {
+    color: #F2DB66;
+}
+
+/* Estilos para o banner */
+.banner .swiper {
+    width: 100%;
+    height: 420px;
+}
+
+.banner .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para os produtos */
+.products {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.products .category-filter {
+    margin-bottom: 20px;
+}
+
+.products .category-filter label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.products .products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cada item de produto */
+.product-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+
+/* Imagem do produto */
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Título do produto */
+.product-item h2 {
+    white-space: nowrap;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Descrição do produto */
+.product-item p {
+    font-size: 0.9rem;
+    height: 3.6em; /* Controla a altura para limitar o número de linhas */
+    line-height: 1.2em; /* Ajusta a altura da linha */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* Preço do produto */
+.product-item span {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+.product-item button {
+    display: inline-block;
+    margin: 10px auto; /* Centraliza o botão horizontalmente */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botões do Carrinho*/
+.add-to-cart,
+.remove-from-cart {
+    font-weight: bolder;
+    display: flex;
+    padding: 10px 20px;
+    background-color: #F25430;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.add-to-cart:hover,
+.remove-from-cart:hover {
+    background-color: #F2DB66;
+    color: #000;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+    color: #fff;
+}
+
+/* Estilos da seção sobre */
+.about {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.about-text h2 {
+    text-align: center;
+    color: #dc3545;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Estilos da seção depoimentos */
+.testimony {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.testimony.header h2 {
+    text-align: center;
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.testimony.header p {
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+}
+
+.testimony-list {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.testimony-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.testimony-text {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimony-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimony-author {
+    font-weight: 600;
+    color: #333;
+}
+.testimony-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos da seção de contato */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.contact-header h2 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.form-contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.label-input-form label {
+    font-weight: 600;
+    display: block; /* Faz o label ocupar uma linha inteira */
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+}
+
+.label-input-form input {
+    width: 40%; /* Faz o input ocupar toda a largura do contêiner */
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.form-contact button {
+    border-radius: 5px;
+    background-color: #F25430;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-contact button:hover {
+    background-color: #d3492a;
+}
+
+/* Estilos do carrinho */
+/* Estilos para o carrinho lateral */
+.cart-open {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Inicia fora da tela */
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding: 20px;
+  }
+  
+  .cart-open.show {
+    right: 0; /* Mostra o carrinho quando ativo */
+  }
+  
+  .cart-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .close-cart {
+    font-size: 30px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  .cart-title {
+    text-align: center;
+  }
+  
+  .cart-itens {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .cart-btn {
+    text-align: center;
+  }
+  
+  .cart-btn button {
+    margin: 10px;
+  }
+
+/* Estilos do footer */
+footer {
+    background-color: #F25430;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+}

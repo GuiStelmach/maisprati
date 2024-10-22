@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fakee</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
 
 
 </head>
@@ -35,8 +34,8 @@
             </ul>
         </div>
         <div class="cart">
-            <button>
-                <a href="">Carrinho</a>
+            <button onclick="openCart()">
+                <p>Carrinho</p>
                 <div> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor"
                         class="bi bi-cart2" viewBox="0 0 16 16">
                         <path
@@ -46,131 +45,190 @@
             </button>
         </div>
     </header>
-    <section class="banner">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="project-img">
-                        <a href="#">
-                            <img src="/module02/tasks/chalangers/atividade-4/images/banner1.jpeg"
-                                alt="Cupons disponiveis">
-                        </a>
+
+    <main>
+        <section class="banner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="#">
+                                <img src="images/banner1.jpeg" alt="Cupons disponiveis">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="#">
+                                <img src="images/banner2.jpeg" alt="Semana da moda">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="#">
+                                <img src="images/banner3.jpeg" alt="Moda feminina">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="project-img">
-                        <a href="#">
-                            <img src="/module02/tasks/chalangers/atividade-4/images/banner2.jpeg" alt="Semana da moda">
-                        </a>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="products" id="produtos">
+            <div class="category-filter">
+                <label for="categorySelect">Filtrar por Categoria:</label>
+                <select id="categorySelect">
+                    <option value="all">Todas</option>
+                </select>
+            </div>
+            <div class="products-list">
+                <!-- Os produtos da ShopFake API serão inseridos aqui -->
+            </div>
+        </section>
+        <section class="about" id="sobre">
+            <div class="about-text">
+                <h2>Sobre Nós</h2>
+                <p>Esta loja foi desenvolvida apenas para fins didáticos, sendo uma loja ficticia. Criada em 2024
+                    utilizando uma API publica para gerar produtos ficticios.
+                    Fico feliz em poder compartilhar com você minha experiência de desenvolvimento web, espero que você
+                    goste.
+                </p>
+            </div>
+        </section>
+        <section class="testimony" id="depoimentos">
+            <div class="testimony header">
+                <h2>Depoimentos</h2>
+                <p>Veja o que nossos clientes estão falando sobre nossos produtos e nosso atendimento.</p>
+            </div>
+            <div class="testimony-list">
+                <div class="testimony-item">
+                    <div class="testimony-text">
+                        <p>"A experiência de compra foi incrível! O suporte é excelente."</p>
+                    </div>
+                    <div class="testimony-user">
+                        <img class="testimony-img" src="" alt="perfil" id="avatar-1">
+                        <h3 class="testimony-author">- João Silva</h3>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="project-img">
-                        <a href="#">
-                            <img src="/module02/tasks/chalangers/atividade-4/images/banner3.jpeg" alt="Moda feminina">
-                        </a>
+                <div class="testimony-item">
+                    <div class="testimony-text">
+                        <p>"Adorei os produtos e a rapidez na entrega!"</p>
+                    </div>
+                    <div class="testimony-user">
+                        <img class="testimony-img" src="" alt="perfil" id="avatar-2">
+                        <h3 class="testimony-author">- Maria Oliveira</h3>
+                    </div>
+                </div>
+                <div class="testimony-item">
+                    <div class="testimony-text">
+                        <p>"Uma loja muito confiável, com ótimos preços."</p>
+                    </div>
+                    <div class="testimony-user">
+                        <img class="testimony-img" src="" alt="perfil" id="avatar-3">
+                        <h3 class="testimony-author">- Carlos Pereira</h3>
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <section class="products" id="produtos">
-        <div class="category-filter">
-            <label for="categorySelect">Filtrar por Categoria:</label>
-            <select id="categorySelect">
-                <option value="all">Todas</option>
-            </select>
-        </div>
-        <div class="products-list">
-            <!-- Os produtos da ShopFake API serão inseridos aqui -->
-        </div>
-    </section>
-    <section class="about" id="sobre">
-        <div class="about-text">
-            <h2>Sobre Nós</h2>
-            <p>Esta loja foi desenvolvida apenas para fins didáticos, sendo uma loja ficticia. Criada em 2024
-                utilizando uma API publica para gerar produtos ficticios.
-                Fico feliz em poder compartilhar com você minha experiência de desenvolvimento web, espero que você
-                goste.
-            </p>
-        </div>
-    </section>
-    <section class="testimony" id="depoimentos">
-        <h2>Depoimentos</h2>
-        <div class="testimony-list">
-            <div class="testimony-item">
-                <p class="testimony-text">"A experiência de compra foi incrível! O suporte é excelente."</p>
-                <img class="testimony-img" src="" alt="perfil" id="avatar-1">
-                <h3 class="testimony-author">- João Silva</h3>
+        </section>
+        <section class="contact" id="contato">
+            <div class="contact-header">
+                <h2>Entre em Contato</h2>
+                <p>Fique a vontade para entrar em contato conosco e deixar seu feedback.</p>
             </div>
-            <div class="testimony-item">
-                <p class="testimony-text">"Adorei os produtos e a rapidez na entrega!"</p>
-                <img class="testimony-img" src="" alt="perfil" id="avatar-2">
-                <h3 class="testimony-author">- Maria Oliveira</h3>
+            <div class="form-cnt">
+                <div class="form-contact">
+                    <form action="" method="post">
+                        <div class="label-input-form">
+                            <label for="name">Nome</label>
+                            <input type="text" placeholder="Nome">
+                        </div>
+                        <div class="label-input-form">
+                            <label for="about">Assunto</label>
+                            <input type="text" placeholder="Assunto">
+                        </div>
+                        <div class="label-input-form">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="label-input-form">
+                            <label for="mesage">Mensagem</label>
+                            <input id="mesage" type="text" placeholder="Sua mensagem">
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
-            <div class="testimony-item">
-                <p class="testimony-text">"Uma loja muito confiável, com ótimos preços."</p>
-                <img class="testimony-img" src="" alt="perfil" id="avatar-3">
-                <h3 class="testimony-author">- Carlos Pereira</h3>
+        </section>
+
+        <div class="cart-open">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <div class="cart-title">
+                    <h2>Seu Carrinho:</h2>
+                    <p>Aproveite os cupons de desconto!</p>
+                </div>
+                <div class="cart-itens">
+                    <!-- Os produtos no carrinho serão inseridos aqui -->
+                </div>
+                <div class="cart-value">
+                    <!-- O valor total do carrinho sera inseridos aqui -->
+                </div>
+                <div class="cart-btn">
+                    <button>
+                        <a href="">Finalizar Compra</a>
+                    </button>
+                    <button>
+                        <a href="">Limpar Carrinho</a>
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="contact" id="contato">
-        <div class="contact-div">
-            <h2>Contato</h2>
-            <form id="contactForm">
-                <div>
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div>
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="formFeedback" style="display:none;"></p>
-        </div>
-    </section>
 
+    <div class="notification" id="notification"></div>
 
     <footer>
         <div class="footer-content">
-            <div class="social-media">
-                <h3>Siga-nos</h3>
-                <ul>
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-                </ul>
+            <div class="links">
+                <div class="footer-social">
+                    <div class="social-icon">
+                        <a href="#">
+                            <img src="images/facebook-24.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="#">
+                            <img src="images/instagram-24.png" alt="Instagram">
+                        </a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="#">
+                            <img src="images/whatsapp-24.png" alt="Whatsapp">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            <a href="">Termos de Uso</a>
+                        </li>
+                        <li>
+                            <a href="">Politica de Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>2024 developed by Guilherme M Stelmach</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 developed by Guilherme M Stelmach</p>
         </div>
     </footer>
-    
-    <div class="notification" id="notification"></div>
+
 
     <script>
         function carregarAvatar(avatarId) {
@@ -184,8 +242,8 @@
         carregarAvatar('avatar-3')
     </script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/module02/tasks/chalangers/atividade-4/js/script.js"></script>
-    <script src="/module02/tasks/chalangers/atividade-4/js/store.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/store.js"></script>
 </body>
 
 </html>
