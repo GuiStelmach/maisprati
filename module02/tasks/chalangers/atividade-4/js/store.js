@@ -40,13 +40,14 @@ function renderProducts() {
         productItem.innerHTML = `
           <img src="${product.image}" alt="${product.title}">
           <h2>${product.title}</h2>
-          <p>${product.description}</p>
+          
           <span>Price: $${product.price}</span>
           <br>
           <button class="add-to-cart">Adicionar ao Carrinho</button>
           <br>
           <button class="remove-from-cart" style="display:none">Remover do Carrinho</button>
         `
+        // <p>${product.description}</p>
         productsList.appendChild(productItem)
 
         const addToCartButton = productItem.querySelector('.add-to-cart')
