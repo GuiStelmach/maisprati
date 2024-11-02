@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar col-12 m-auto position-fixed navbar-expand-lg navbar-dark bg-dark" style="z-index: 999;">
+        <div class="container-fluid col-11 m-auto">
+            <a class="navbar-brand" href="#">HR-Car</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="banner">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="images/banner1.jpg" alt="Cupons disponiveis">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="images/banner2.jpeg" alt="Semana da moda">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <a href="#">
+                            <img src="images/banner3.jpeg" alt="Moda feminina">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <section class="servicos">
+        <h1 class="text-center mt-4 mb-4">Serviços</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-1 col-11 m-auto">
+            <div class="col">
+              <div class="card">
+                <img src="images/geo.jpg" class="card-img-top" alt="Geometria" style="max-width: 100%; max-height: 335px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Geometria</h5>
+                  <p class="card-text">A geometria correta das rodas é essencial para o desempenho e a segurança do seu veículo. Nosso serviço de alinhamento melhora a dirigibilidade, reduz o desgaste dos pneus e garante uma direção mais estável.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/bal.jpeg" class="card-img-top" alt="Balanceamento" style="max-width: 100%; max-height: 335px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Balanceamento</h5>
+                  <p class="card-text">Um balanceamento adequado evita vibrações, proporcionando um rodar mais suave e aumentando a durabilidade dos pneus. Nossa equipe usa equipamentos de última geração para garantir a precisão e o conforto do seu carro.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/susp.jpeg" class="card-img-top" alt="Suspensão" style="max-width: 100%; max-height: 335px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Suspensão</h5>
+                  <p class="card-text">O sistema de suspensão é fundamental para absorver impactos e manter a estabilidade do veículo. Realizamos revisão completa da suspensão para garantir um passeio seguro e confortável em qualquer tipo de estrada.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="images/freio.jpg" class="card-img-top" alt="Freios" style="max-width: 100%; max-height: 335px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Freios</h5>
+                  <p class="card-text">A segurança começa pelos freios. Realizamos inspeções e manutenções para garantir que o sistema de freios esteja funcionando com eficiência máxima, proporcionando resposta rápida e segurança na frenagem.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+            <button class="btn-agend">
+                <a href="#">
+                    <img src="images/whatsapp-24.png" alt="">
+                    <span class="text-center">Agende Seu Horário</span>
+                </a>
+            </button>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

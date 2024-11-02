@@ -136,45 +136,66 @@ header {
     height: 20px;
 }
 
-.services-container {
-    background-color: #fff;
+.btn-agend a {
+    font-size: large;
+    font-weight: bolder;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
-.services-left, .services-right {
-    margin-top: 10%;
-    margin-bottom: 5%;
+.btn-agend {
+    margin-top: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.item {
-    text-align: center;
-}
-
-.service-image img {
-    width: 100%;
-    max-width: 35px;
-    height: auto;
-}
-
-.service-name {
-    margin-top: 10px;
-}
-
-.car-image {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #02a43d;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
-.car-image img {
-    max-width: 400px;
+.btn-agend:hover {
+    transform: scale(1.1);
+}
+
+.servicos {
+    border-top: 2px solid #000000;
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.depoimentos {
+    border-top: 2px solid #000000;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+.contato {
+    border-top: 2px solid #dfdfd2;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.contato button {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.contato button:hover {
+    background-color: #ff4e4e;
+    border-color: #ff0000;
+}
+
+.depoimentos h1 {
+    color: #333;
+}
+
+.depoimentos .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -182,31 +203,6 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-}
-
-.navbar-footer ul {
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.navbar-footer li {
-    margin: 5px 0;
-}
-
-.navbar-footer li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.3s ease;
-}
-
-.navbar-footer li a:hover {
-    color: var(--primary);
 }
 
 .p-footer p {

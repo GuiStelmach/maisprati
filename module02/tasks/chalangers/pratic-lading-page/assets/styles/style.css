@@ -1,0 +1,310 @@
+:root {
+    --primary: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1000;
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-center ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.header-center li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header-center li a:hover {
+    color: var(--primary);
+}
+
+.header-rigth ul {
+    display: flex;
+    gap: 5px;
+    list-style-type: none;
+}
+
+.header-rigth li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.top-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+}
+
+.top-body img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.text-btn {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-btn h2 {
+    font-size: 2em;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+.text-btn h4 {
+    font-size: 1.6em;
+    color: #6c757d;
+    margin-bottom: 1em;
+}
+.text-btn p {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 1em;
+}
+
+.text-btn button {
+    margin-top: 2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.text-btn button a {
+    text-decoration: none;
+    color: white;
+}
+.text-btn button:hover {
+    transform: scale(1.1);
+}
+
+.servicos h1 {
+    color: #333;
+}
+
+.servicos .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.servicos .card-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-agend {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.btn-agend a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-agend:hover {
+    transform: scale(1.1);
+}
+
+.depoimentos h1 {
+    color: #333;
+}
+
+.depoimentos .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.depoimentos .card h5 {
+    color: #333;
+}
+
+.depoimentos .card p {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.contato h1 {
+    color: #333;
+}
+
+.contato .form-label {
+    color: #333;
+}
+
+.contato input,
+.contato textarea {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+footer {
+    margin-top: 2rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+/* Responsividade para tablets e telas intermediárias */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+
+    .header-center ul, .header-rigth ul {
+        gap: 15px;
+    }
+
+    .text-btn {
+        padding: 15px;
+    }
+
+    .text-btn h2 {
+        font-size: 1.8em;
+    }
+
+    .text-btn h4, .text-btn p {
+        font-size: 1.1em;
+    }
+}
+
+/* Responsividade para telas menores (smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .header-center ul, .header-rigth ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-body img {
+        max-height: 300px;
+    }
+
+    .text-btn {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .text-btn h2 {
+        font-size: 1.6em;
+    }
+
+    .text-btn h4, .text-btn p {
+        font-size: 1em;
+    }
+
+    .text-btn button {
+        width: 100%;
+        padding: 0.5em 0;
+        font-size: 0.9em;
+    }
+
+    .servicos h1, .depoimentos h1, .contato h1 {
+        font-size: 1.5em;
+    }
+
+    .btn-agend {
+        width: 100%;
+        padding: 0.5em 0;
+    }
+}
+
+/* Responsividade para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .header-center ul, .header-rigth ul {
+        gap: 5px;
+        text-align: center;
+    }
+
+    .top-body img {
+        max-height: 200px;
+    }
+
+    .text-btn h2 {
+        font-size: 1.4em;
+    }
+
+    .text-btn h4, .text-btn p {
+        font-size: 0.9em;
+    }
+
+    .servicos h1, .depoimentos h1, .contato h1 {
+        font-size: 1.2em;
+    }
+
+    .contato input,
+    .contato textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 0.5em 0;
+    }
+}
