@@ -12,60 +12,39 @@
 </head>
 
 <body>
-    <header>
-        
-        <div class="header-center">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="http://">Home</a>
-                    </li>
-                    <li>
-                        <a href="http://">Serviços</a>
-                    </li>
-                    <li>
-                        <a href="http://">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="http://">Contato</a>
-                    </li>
-                </ul>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#about">Sobre</a>
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                </div>
+            </div>
         </div>
-        <div class="header-rigth">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="./assets/images/icon/facebook-24.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./assets/images/icon/instagram-24.png" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./assets/images/icon/whatsapp-24.png" alt="whatsapp">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    </nav>
     <div class="top-body">
         <img src="./assets/images/civic-1.jpg" alt="civic">
     </div>
-    <div class="text-btn">
+    <section class="about" id="about">
         <img src="./assets/images/hrcar-logo.png" alt="Logo HR-Car" height="240" width="240">
         <h4>Geometria, Balanceamento, Suspenção e Freios</h4>
         <div class="about">
             <p>Com mais de 30 anos de experiência, somos reconhecidos pela qualidade do nosso serviço e pelo atendimento
-                dedicado aos nossos clientes. Aqui, nos preocupamos com o seu veículo e com a sua segurança nas estradas.
+                dedicado aos nossos clientes. Aqui, nos preocupamos com o seu veículo e com a sua segurança nas
+                estradas.
                 Por isso, trabalhamos sempre com dedicação e responsabilidade, garantindo que cada reparo seja feito com
                 precisão e atenção aos detalhes.</p>
-            <p>Utilizamos apenas peças de alta qualidade e contamos com uma equipe técnica especializada para oferecer o
-                melhor em manutenção, revisão e reparos automotivos. Nosso compromisso é assegurar que o seu veículo esteja
-                sempre em ótimas condições, proporcionando confiança e tranquilidade para você e sua família em cada viagem.
+            <p>Utilizamos apenas peças de alta qualidade para oferecer o
+                melhor em manutenção, revisão e reparos automotivos. Nosso compromisso é assegurar que o seu veículo
+                esteja
+                sempre em ótimas condições, proporcionando confiança e tranquilidade para você e sua família em cada
+                viagem.
             </p>
         </div>
         <button>
@@ -74,8 +53,8 @@
                 Fale Conosco
             </a>
         </button>
-    </div>
-    <section class="servicos">
+    </section>
+    <section class="servicos" id="servicos">
         <h1 class="text-center mt-4 mb-4">Serviços</h1>
         <div class="row row-cols-1 row-cols-md-2 g-1 col-11 m-auto">
             <div class="col">
@@ -136,7 +115,7 @@
             </button>
         </div>
     </section>
-    <section class="depoimentos">
+    <section class="depoimentos" id="depoimentos">
         <h1 class="text-center mt-4 mb-4">Depoimentos</h1>
         <div class="container">
             <div class="row">
@@ -176,7 +155,7 @@
             </div>
         </div>
     </section>
-    <section class="contato">
+    <section class="contato" id="contato">
         <h1 class="text-center mt-4 mb-4">Contato</h1>
         <div class="container">
             <form action="#" method="POST" class="row g-3 col-12 col-md-8 mx-auto">

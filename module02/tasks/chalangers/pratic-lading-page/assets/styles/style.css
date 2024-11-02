@@ -14,7 +14,7 @@ body {
     background-color: #f8f9fa;
 }
 
-header {
+/* header {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +57,7 @@ header {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-}
+} */
 
 .top-body {
     display: flex;
@@ -72,7 +72,7 @@ header {
     object-fit: cover;
 }
 
-.text-btn {
+.about {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -82,24 +82,24 @@ header {
     align-items: center;
 }
 
-.text-btn h2 {
+.about h2 {
     font-size: 2em;
     color: #333;
     text-transform: uppercase;
     margin-bottom: 0.5em;
 }
-.text-btn h4 {
+.about h4 {
     font-size: 1.6em;
     color: #6c757d;
     margin-bottom: 1em;
 }
-.text-btn p {
+.about p {
     font-size: 1.2em;
     color: #6c757d;
     margin-bottom: 1em;
 }
 
-.text-btn button {
+.about button {
     margin-top: 2rem;
     background-color: #28a745;
     color: white;
@@ -111,11 +111,11 @@ header {
     transition: transform 0.5s ease;
 }
 
-.text-btn button a {
+.about button a {
     text-decoration: none;
     color: white;
 }
-.text-btn button:hover {
+.about button:hover {
     transform: scale(1.1);
 }
 
@@ -211,15 +211,15 @@ footer p {
         gap: 15px;
     }
 
-    .text-btn {
+    .about {
         padding: 15px;
     }
 
-    .text-btn h2 {
+    .about h2 {
         font-size: 1.8em;
     }
 
-    .text-btn h4, .text-btn p {
+    .about h4, .about p {
         font-size: 1.1em;
     }
 }
@@ -240,20 +240,20 @@ footer p {
         max-height: 300px;
     }
 
-    .text-btn {
+    .about {
         padding: 10px;
         max-width: 100%;
     }
 
-    .text-btn h2 {
+    .about h2 {
         font-size: 1.6em;
     }
 
-    .text-btn h4, .text-btn p {
+    .about h4, .about p {
         font-size: 1em;
     }
 
-    .text-btn button {
+    .about button {
         width: 100%;
         padding: 0.5em 0;
         font-size: 0.9em;
@@ -285,11 +285,11 @@ footer p {
         max-height: 200px;
     }
 
-    .text-btn h2 {
+    .about h2 {
         font-size: 1.4em;
     }
 
-    .text-btn h4, .text-btn p {
+    .about h4, .about p {
         font-size: 0.9em;
     }
 
