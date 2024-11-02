@@ -119,19 +119,34 @@ body {
     transform: scale(1.1);
 }
 
-.servicos h1 {
-    color: #333;
+.servicos {
+    position: relative;
+    overflow: hidden;
 }
 
-.servicos .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: none;
+.swiper-container {
+    width: 100%;
+    height: auto; /* Ajuste automático da altura */
+    max-height: 85vh;
 }
 
-.servicos .card-title {
-    color: #333;
-    font-weight: bold;
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary); /* Cor dos botões para visibilidade */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    z-index: 10;
 }
+
+.swiper-button-next {
+    right: 10px; /* Ajuste a posição conforme necessário */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Ajuste a posição conforme necessário */
+}
+
 
 .btn-agend {
     margin-top: 2rem;
