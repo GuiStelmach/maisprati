@@ -1,0 +1,33 @@
+.centralizado {
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+
+.btn-agend a {
+    font-size: large;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-agend {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #02a43d;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.btn-agend:hover {
+    transform: scale(1.1);
+}
