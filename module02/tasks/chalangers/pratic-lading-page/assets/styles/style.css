@@ -14,51 +14,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 50px;
-    z-index: 1000;
-    background-color: rgba(50, 50, 50, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.header-center ul {
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-}
-
-.header-center li a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.header-center li a:hover {
-    color: var(--primary);
-}
-
-.header-rigth ul {
-    display: flex;
-    gap: 5px;
-    list-style-type: none;
-}
-
-.header-rigth li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-} */
-
 .top-body {
     display: flex;
     justify-content: center;
@@ -126,25 +81,25 @@ body {
 
 .swiper-container {
     width: 100%;
-    height: auto; /* Ajuste automático da altura */
+    height: auto;
     max-height: 85vh;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--primary); /* Cor dos botões para visibilidade */
+    color: var(--primary);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centraliza verticalmente */
+    transform: translateY(-50%);
     z-index: 10;
 }
 
 .swiper-button-next {
-    right: 10px; /* Ajuste a posição conforme necessário */
+    right: 10px;
 }
 
 .swiper-button-prev {
-    left: 10px; /* Ajuste a posição conforme necessário */
+    left: 10px;
 }
 
 
