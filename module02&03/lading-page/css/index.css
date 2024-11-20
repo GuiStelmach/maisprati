@@ -307,7 +307,7 @@ footer {
   transform: translateY(-50%);
   width: 12px;
   height: 20px;
-  background: url("/images/lupa.png") no-repeat center center;
+  background: url("./images/lupa.png") no-repeat center center;
   background-size: contain;
   filter: invert(1);
 }
@@ -469,24 +469,19 @@ footer {
 }
 
 .pricing {
+  margin-top: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 25px;
   color: #ffffff;
 }
 
 .square-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 15px;
-  background-color: red;
-  color: white;
   font-size: 2rem;
-  margin-right: 10px;
+  font-weight: 400;
+  background: red;
   border-radius: 8px;
-  width: 25%;
   cursor: pointer;
 }
 
