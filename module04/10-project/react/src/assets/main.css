@@ -1,0 +1,17 @@
+:root {
+    --cor-fundo: #F6F1ED; /* Define a cor de fundo principal da página */
+    --branco: #fff; /* Branco puro */
+    --branco-2: #d7d1cb; /* Tom de branco acinzentado */
+    --preto: #000; /* Preto puro */
+    --verde-escuro: #1B1E18; /* Verde escuro usado para textos e fundos */
+    --verde-escuro-2: #121410; /* Verde ainda mais escuro */
+    --cinza-verde: #83908F; /* Cinza com tonalidade esverdeada */
+    --vermelho: #881212; /* Vermelho intenso, ideal para botões e destaques */
+}
+
+body {
+    background: var(--cor-fundo); /* Aplica a cor de fundo usando a variável global */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamento interno padrão */
+    overflow-x: hidden; /* Impede rolagem horizontal indesejada */
+}
