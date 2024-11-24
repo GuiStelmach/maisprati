@@ -6,10 +6,6 @@ Este projeto tem como objetivo aprimorar uma landing page existente, implementan
 
 - **css/**: Contém os arquivos de estilos CSS.
 - **fonts/**: Contém as fontes utilizadas no projeto.
-  - **Font created by David Pustansky.**
-  - Para mais informações sobre a licença, visite: [www.davidpustansky.com/fonts](http://www.davidpustansky.com/fonts)
-  - Como regra geral, qualquer fonte criada com base em um filme/TV/jogo/franquia de mídia deve ser considerada arte de fã e é gratuita para uso pessoal, não podendo ser usada para qualquer uso comercial.
-  - Designs originais de David Pustansky podem ter diferentes acordos de licença, cujos detalhes podem ser encontrados em: [www.davidpustansky.com/fonts](http://www.davidpustansky.com/fonts)
 - **images/**: Contém as imagens utilizadas no projeto.
 - **js/**: Contém os arquivos JavaScript.
 - **index.html**: Arquivo raiz
@@ -30,7 +26,7 @@ Este projeto tem como objetivo aprimorar uma landing page existente, implementan
 6. **Fontes Customizadas**: Adição de fontes personalizadas para melhorar a estética visual da página. Foram utilizadas fontes modernas e compatíveis com o tema da landing page, como Google Fonts.
 
 7. **Testes e Validação**: A página foi testada em diferentes navegadores e dispositivos para garantir que todas as funcionalidades, como o carrossel, modais, links, e responsividade estejam funcionando conforme esperado.
-8. **Página da Aplicação**: https://sexta-atividade.vercel.app/
+8. **Página da Aplicação**: https://github.com/GuiStelmach/nintendo-switch-lp
    
  
 
@@ -38,17 +34,15 @@ Este projeto tem como objetivo aprimorar uma landing page existente, implementan
 
 1. Clone o repositório para sua máquina local:
    ```sh
-   git clone https://github.com/teofilonicolau/sexta_atividade.git
+   git clone https://github.com/GuiStelmach/nintendo-switch-lp
 
     ```
 2. Navegue até a pasta do projeto:
    ```sh
-   cd sexta_atividade
+   cd nintendo-switch-lp
 
  ```
 3. Abra o arquivo index.html no seu navegador para visualizar a landing page.
-
-Licença:Tem a minha
 
 
 
