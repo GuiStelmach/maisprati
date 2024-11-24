@@ -41,7 +41,7 @@ Este projeto tem como objetivo aprimorar uma landing page existente, implementan
    ```sh
    cd nintendo-switch-lp
 
- ```
+  ```
 3. Abra o arquivo index.html no seu navegador para visualizar a landing page.
 
 
