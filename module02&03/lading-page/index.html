@@ -19,19 +19,17 @@
         <a href="#" class="logo">
             <img src="images/nintendo-switch.png" alt="Nintendo Switch Logo" height="240" width="240" />
         </a>
-        <button class="mobile-menu" aria-label="Abrir menu mobile" aria-expanded="false" onclick="toggleMenu()">
-            <span class="line1"></span>
-            <span class="line2"></span>
-            <span class="line3"></span>
-        </button>               
+    
         <nav aria-label="Menu principal">
             <ul class="nav">
                 <li><a href="https://www.nintendo.com/us/whatsnew/" target="_blank">Switch News</a></li>
                 <li><a href="https://www.nintendo.com/pt-br/switch/online/" target="_blank">Switch Online</a></li>
-                <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/"
-                        target="_blank">Switch Classic</a></li>
+                <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a></li>
             </ul>
         </nav>
+    
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    
         <div class="login">
             <input type="email" id="emailInput" class="logar" placeholder="Entre com seu email">
             <button class="button" onclick="validateEmail()">Login</button>
@@ -40,6 +38,7 @@
             <input type="text" id="gameInput" placeholder="Search">
         </div>
     </header>
+    
 
     <main>
         <div class="swiper">
