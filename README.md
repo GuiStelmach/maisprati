@@ -15,9 +15,9 @@
 ## Tópicos Gerais:
 - [x]  Introdução à Lógica de Programação + Estrutura de Dados (17 Aulas) 
 - [x]  Introdução ao Controle de Versão com Git e Github (3 Aulas)
-- [ ]  Fundamentos do Desenvolvimento Fron-End(13 Aulas)
-- [ ]  Trilha Complementar: Design para quem não é Designer
-- [ ]  Desenvolvendo Front-End com ReactJs(13 Aulas)
+- [X]  Fundamentos do Desenvolvimento Fron-End(13 Aulas)
+- [X]  Trilha Complementar: Design para quem não é Designer
+- [X]  Desenvolvendo Front-End com ReactJs(13 Aulas)
 - [ ]  Introdução à  linguagem Java(17 Aulas)
 - [ ]  Fundamentos de Bancos de Dados Relacionais(13 Aulas)
 - [ ]  Desenvolvimento de API's Rest com Spring Boot(13 Aulas)

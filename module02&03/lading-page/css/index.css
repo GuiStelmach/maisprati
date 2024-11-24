@@ -1,0 +1,898 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff0000;
+}
+
+/* Efeito de fundo tipo vidro */
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 1;
+  background-color: darken(#ff0000, 10%);
+}
+
+button:focus {
+  outline: 2px solid #ff0000;
+}
+
+.modal-body label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-body select,
+.modal-body input {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.modal-body select:focus,
+.modal-body input:focus {
+  border-color: #ff0000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}
+
+body {
+  position: relative;
+  background-color: #000000;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 20;
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  background: transparent;
+}
+
+.logo img {
+  max-width: 60px;
+  max-height: 60px;
+  filter: invert(1);
+  transition: transform 0.5s ease;
+}
+
+.logo:hover img {
+  transform: rotate(540deg) scale(1.2);
+  transition: transform 0.5s ease;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav li .logo {
+  display: none;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav li a,
+.nav-list #itemListNavLogin {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px;
+  text-shadow: 0px 0px 5px black;
+}
+
+
+.nav li:hover a {
+  color: var(--primary);
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  transition: 0.5s;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.login .button:hover {
+  color: var(--primary);
+}
+
+.login .logar {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 30px;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px 0 5px;
+}
+
+.search {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+.search:hover {
+  width: 300px;
+}
+
+.search input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px 0 5px;
+}
+
+.search input::placeholder {
+  color: #ffffff;
+  text-transform: uppercase;
+  transform: translateX(5px);
+  font-weight: bold;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 20px;
+  background: url("./images/lupa.png") no-repeat center center;
+  background-size: contain;
+  filter: invert(1);
+}
+
+.search input:hover,
+.search input:focus {
+  border: 1px solid #ffffff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper .swiper-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner img {
+  position: absolute;
+  max-width: 700px;
+  transform: translateX(-50%);
+  z-index: 1;
+  left: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner img {
+  position: absolute;
+  max-width: 450px;
+  transform: translateX(-55%);
+  z-index: 1;
+  left: 50%;
+}
+
+.swiper .swiper-button-prev {
+  position: absolute;
+  width: 4%;
+  height: 8%;
+  top: 80%;
+  left: 10%;
+  z-index: 100;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid rgb(224, 213, 213);
+  transform: translateY(-50%);
+}
+
+.swiper .swiper-button-next {
+  position: absolute;
+  right: 82%;
+  top: 80%;
+  width: 4%;
+  height: 8%;
+  z-index: 100;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid rgb(224, 213, 213);
+  transform: translateY(-50%);
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(224, 213, 213);
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.right {
+  max-height: 70vh;
+}
+
+.banner img {
+  max-width: 790px;
+  max-height: 790px;
+  width: 50%;
+  height: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.banner .left .features {
+  max-width: 400px;
+  margin-bottom: 100px;
+}
+
+.banner .left .features .rating {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.banner .left .features .rating .score {
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary);
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+
+.banner .left .features .content {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+}
+
+.square-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 8px;
+  width: 150px;
+  height: 80px;
+  transition: 0.5s;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.square-button:hover {
+  color: red;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+}
+
+.pricing .content {
+  color: #ffffff;
+}
+
+.pricing .content .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.pricing h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.banner .left .features .pricing {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+.banner .left .features .pricing .link-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+  background: var(--primary);
+}
+
+.banner .left .features .content h4 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.banner .left .features .content span {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.banner .left .features .content .subtitle {
+  color: var(--primary);
+}
+
+.banner h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 4em;
+  letter-spacing: 5px;
+  line-height: 0.9;
+  z-index: 10;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px black;
+}
+
+.mario {
+  font-family: "New Super Mario Font U", sans-serif !important;
+  margin-bottom: 20px;
+}
+
+.pokemon-title {
+  font-family: "Pokemon Solid", sans-serif !important;
+  font-size: 20px;
+}
+
+.zelda {
+  font-family: "The Wild Breath of Zelda", sans-serif !important;
+  margin-bottom: 20px;
+}
+
+.rating {
+  margin-top: 20px;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .right {
+  position: relative;
+  height: 100vh;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.banner .right .description {
+  padding: 30px 60px 0 0;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px black;
+}
+
+.banner .right .description li {
+  list-style: none;
+}
+
+.banner .right .description p {
+  margin: 5px 0 25px 29px;
+  font-weight: 300;
+}
+
+.banner .right h2 {
+  color: #ffffff;
+  font-size: 2.5em;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px black;
+}
+
+.banner .right iframe {
+  max-width: 450px;
+  max-height: 250px;
+}
+
+.notification {
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+/* O iframe à direita do banner tem largura máxima de 450px e altura máxima de 250px. */
+
+/* Estilos gerais para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .login,
+  .search {
+    display: none;
+  }
+
+  /* Ajuste da imagem dentro do banner */
+  .swiper .swiper-wrapper .swiper-slide .banner img {
+    max-width: 100%;
+    max-height: 70vh;
+    /* Limite a altura das imagens para 70% da altura da tela */
+    width: auto;
+    /* A largura é ajustada automaticamente */
+    height: auto;
+    object-fit: contain;
+    /* Manter a proporção da imagem */
+  }
+
+  .nav .nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #23232e;
+    z-index: 102;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav .nav-list .logo {
+    display: block;
+  }
+
+  .nav .nav-list li {
+    margin-left: 0;
+  }
+
+  .nav-list .login {
+    display: block;
+  }
+
+  .swiper {
+    overflow: scroll !important;
+    position: static !important;
+  }
+
+  .banner h1 {
+    font-size: 3em;
+  }
+
+  .swiper .swiper-wrapper .swiper-slide .banner img {
+    display: none;
+  }
+
+  .search-btnLogin-container {
+    justify-content: center;
+  }
+
+  #btnLogin {
+    display: none;
+  }
+
+  .swiper .swiper-wrapper .swiper-slide .banner {
+    padding: 1rem;
+    padding-top: 12rem;
+    flex-direction: column;
+  }
+
+  .swiper .swiper-wrapper .swiper-slide .banner .left {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .banner .left .features {
+    margin-bottom: 3rem;
+  }
+
+  .swiper .swiper-wrapper .swiper-slide .banner .right {
+    align-items: center;
+    max-height: initial;
+    justify-content: initial;
+    height: initial;
+  }
+
+  .banner .right .description {
+    padding: initial;
+  }
+
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner .right h2 {
+    text-align: center;
+  }
+
+  .banner .right iframe {
+    max-width: 300px;
+    max-height: 185px;
+  }
+
+  /* Estilo do sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* Largura do menu lateral */
+    height: 30%;
+    /* Ocupa toda a altura da tela */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fundo transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque */
+    color: white;
+    padding: 1rem 2rem;
+    transform: translateX(100%);
+    /* Esconde o menu fora da tela inicialmente */
+    transition: transform 0.3s ease-in-out;
+    /* Transição suave */
+    z-index: 9;
+    /* Aparece acima de outros elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5%;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .sidebar nav ul li a:hover {
+    color: #ff0000;
+    /* Cor de destaque ao passar o mouse */
+  }
+
+  .sidebar .login,
+  .sidebar .search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sidebar .login .button {
+    background-color: #ff0000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .sidebar .login .button:hover {
+    background-color: #cc0000;
+    /* Cor mais escura no hover */
+  }
+
+  .sidebar .search input {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fundo semi-transparente */
+    color: white;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .sidebar .search input:focus {
+    border-color: #ff0000;
+    /* Cor de destaque ao focar */
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+    /* Exibe o menu lateral */
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Estilos para o hambúrguer quando ativado */
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+}
+
+.nav .nav-list.active {
+  transform: translateX(0);
+}
+
+/* Esconde o menu hambúrguer em telas maiores */
+@media (min-width: 768px) {
+
+  .mobile-menu,
+  .sidebar {
+    display: none;
+  }
+}

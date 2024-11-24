@@ -1,0 +1,96 @@
+:root {
+    --cor-fundo: #F6F1ED; /* Define a cor de fundo principal da página */
+    --branco: #fff; /* Branco puro */
+    --branco-2: #d7d1cb; /* Tom de branco acinzentado */
+    --preto: #000; /* Preto puro */
+    --verde-escuro: #1B1E18; /* Verde escuro usado para textos e fundos */
+    --verde-escuro-2: #121410; /* Verde ainda mais escuro */
+    --cinza-verde: #83908F; /* Cinza com tonalidade esverdeada */
+    --vermelho: #881212; /* Vermelho intenso, ideal para botões e destaques */
+}
+
+.Navigation {
+    width: 100%; /* Largura total da tela */
+    min-width: 1090px; /* Define largura mínima para evitar que quebre em telas pequenas */
+    z-index: 999; /* Garante que a navegação fique acima de outros elementos */
+    top: 60px; /* Posição da barra em relação ao topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move a barra para o centro horizontal */
+}
+
+.Navigation-itens {
+    padding: 20px; /* Adiciona espaçamento interno para os itens */
+    position: relative; /* Define o posicionamento relativo aos elementos filhos */
+    float: right; /* Alinha os itens à direita */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-right: 20px; /* Espaçamento direito */
+}
+
+.logo-autora {
+    margin-top: 46px; /* Espaçamento superior */
+    margin-left: 85px; /* Espaçamento esquerdo */
+    position: relative; /* Necessário para posicionamento de elementos internos */
+    width: 250px; /* Largura fixa do contêiner da logo */
+    float: left; /* Alinha o logo à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.cruz {
+    width: 54px; /* Largura fixa da imagem da cruz */
+    height: 54px; /* Altura fixa da cruz */
+}
+
+.nome-navigation {
+    position: absolute; /* Posicionamento livre dentro do contêiner */
+    left: 92px; /* Distância à esquerda */
+    top: 33px; /* Distância do topo */
+    width: 150px; /* Largura fixa */
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-family: Karma; /* Fonte personalizada */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 30px; /* Altura da linha */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+}
+
+.items {
+    display: inline-flex; /* Exibe itens em linha e permite flexibilidade */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 48px; /* Espaçamento horizontal entre os itens */
+}
+
+.items p, a {
+    font-size: 20px; /* Tamanho da fonte dos textos e links */
+    font-weight: 700; /* Fonte em negrito */
+    color: var(--preto); /* Cor preta definida na variável global */
+    text-decoration: none; /* Remove sublinhado dos links */
+    overflow: hidden; /* Oculta conteúdo excedente */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    white-space: nowrap; /* Impede quebra automática de linha */
+}
+
+.items p:hover, a:hover {
+    color: var(--branco); /* Altera a cor para branco ao passar o mouse */
+}
+
+.button-navigation {
+    padding-right: 25px; /* Espaçamento interno à direita */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: background 0.3s ease; /* Animação suave na mudança de fundo */
+}
+
+.button-navigation div.ComprarAgora, a#ComprarAgora {
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 500; /* Fonte com peso médio */
+    margin-bottom: -4px; /* Ajusta o alinhamento vertical */
+}
+
+.button-navigation:hover {
+    background-color: var(--vermelho); /* Altera a cor de fundo para vermelho ao passar o mouse */
+    transition: 0.3s ease; /* Define uma transição suave para a mudança */
+}

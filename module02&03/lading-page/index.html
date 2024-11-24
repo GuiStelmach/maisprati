@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="Compre agora os jogos de melhor avaliação do Nintendo Switch pelo melhor preço!">
+    <meta name="keywords" content="Mario, Pokemon, Zelda, Nintendo, Nintendo Switch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Gaming Website Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="images/nintendo-switch.png" alt="Nintendo Switch Logo" height="240" width="240" />
+        </a>
+    
+        <nav aria-label="Menu principal">
+            <ul class="nav">
+                <li><a href="https://www.nintendo.com/us/whatsnew/" target="_blank">Switch News</a></li>
+                <li><a href="https://www.nintendo.com/pt-br/switch/online/" target="_blank">Switch Online</a></li>
+                <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a></li>
+            </ul>
+        </nav>
+    
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    
+        <div class="login">
+            <input type="email" id="emailInput" class="logar" placeholder="Entre com seu email">
+            <button class="button" onclick="validateEmail()">Login</button>
+        </div>
+        <div class="search">
+            <input type="text" id="gameInput" placeholder="Search">
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="slide-1">
+                    <img src="images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Super Mario Odyssey Banner">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <h1 class="mario">Mario</h1>
+                                <div class="rating">
+                                    <span class="score">9.2</span>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Ótimo</h4>
+                                        <span>Descrição do Jogo Mario Odyssey</span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <div class="square-button">COMPRAR</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/mario.png" alt="Mario">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <p>Lançado em: 27 de Outubro 2017</p>
+                                </li>
+                                <li>
+                                    <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                </li>
+                            </ul>
+                            <div class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/5kcdRBHM7kM"
+                                    title="Super Mario Odyssey Trailer" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide-2">
+                    <img src="images/pokemon-legends-arceus.jpeg" alt="Pokemon Legends Arceus Banner">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <h1 class="pokemon-title">Pokemon</h1>
+                                <div class="rating">
+                                    <span class="score">8.3</span>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Bom</h4>
+                                        <span>Prepare-se para uma aventura Pokemon!</span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <div class="square-button">COMPRAR</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <img src="images/red.png" alt="Treinador Pokemon Red" class="pokemon">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <p>Lançado em: 28 de Janeiro</p>
+                                </li>
+                                <li>
+                                    <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                </li>
+                            </ul>
+                            <div id="t2" class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/qZcgXYapc8Q"
+                                    title="Pokemon Legends: Arceus - Official Launch Trailer" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" id="slide-3">
+                    <img src="images/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg" alt="The Legend of Zelda Banner">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <h1 class="zelda">Zelda</h1>
+                                <div class="rating">
+                                    <span class="score">9.7</span>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Excelente</h4>
+                                        <span>Esqueça tudo que você sabe sobre os jogos da série The Legend of
+                                            Zelda.</span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <div class="square-button">COMPRAR</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <img src="images/link.png" alt="Zelda">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <p>Lançado em: 03 de Março de 2017</p>
+                                </li>
+                                <li>
+                                    <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                </li>
+                            </ul>
+
+                            <div id="t3" class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/zw47_q9wbBE"
+                                    title="The Legend of Zelda: Breath of the Wild Trailer" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </main>
+
+    <!-- Modal para Finalizar Compra -->
+    <h1>Compra de Jogos</h1>
+    <button id="open-modal" aria-label="Abrir modal de compra">Comprar</button>
+
+    <!-- Filtro de fundo para o modal -->
+    <div id="fade" class="hide" aria-hidden="true"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="hide" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-header">
+            <h2 id="modal-title">🛒 Finalizar Compra</h2>
+            <button id="close-modal" aria-label="Fechar modal">X</button>
+        </div>
+
+        <div class="modal-body">
+            <form id="purchase-form">
+                <!-- Seletor de Jogo -->
+                <label for="game-select">Escolha o Jogo:</label>
+                <select id="game-select" name="game" required>
+                    <option value="Mario Odyssey">Mario Odyssey</option>
+                    <option value="Pokemon Legends: Arceus">Pokemon Legends: Arceus</option>
+                    <option value="The Legend of Zelda">The Legend of Zelda</option>
+                </select>
+
+                <!-- Forma de Pagamento -->
+                <label for="payment-method">Forma de Pagamento:</label>
+                <select id="payment-method" name="payment" required>
+                    <option value="Cartão">Cartão</option>
+                    <option value="Pix">Pix</option>
+                </select>
+
+                <!-- Endereço -->
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
+
+                <!-- Botão para Confirmar Compra -->
+                <button type="submit" aria-label="Confirmar compra">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+    <div id="notification-container" style="position: fixed; top: 10px; right: 10px; z-index: 1000;"></div>
+    <footer>
+        <p class="foot">&copy; 2024 Gaming Website. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/toggleMenu.js"></script>
+</body>
+
+</html>
