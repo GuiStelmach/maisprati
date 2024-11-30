@@ -1,0 +1,97 @@
+/* Centraliza o container principal no meio da tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #142f30;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container do formulário */
+  .form-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #88b499;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  /* Estilo do título */
+  .form-container h1 {
+    font-size: 1.8rem;
+    color: #142f30;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo do formulário */
+  .registration-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .registration-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #142f30;
+  }
+  
+  .registration-form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e7e4d5;
+    border-radius: 5px;
+    background-color: #fff3db;
+    color: #142f30;
+  }
+  
+  .registration-form input::placeholder {
+    color: #999;
+  }
+  
+  /* Mensagem de erro */
+  .error-message {
+    color: #ed6d4a;
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Botão de envio */
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3fd97f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2fb765;
+  }
+  
+  /* Container de boas-vindas */
+  .welcome-container {
+    text-align: center;
+    background-color: #d3c8b4; /* Fundo do container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .welcome-container h2 {
+    color: #142f30;
+  }
+  
+  .welcome-container p {
+    color: #142f30;
+  }
+  

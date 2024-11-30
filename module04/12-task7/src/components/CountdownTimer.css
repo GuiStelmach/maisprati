@@ -1,0 +1,124 @@
+/* Estilos gerais do timer */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .countdown-timer-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .countdown-timer h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #394736;
+  }
+  
+  /* Estilo do campo de entrada para tempo */
+  input[type="number"] {
+    width: 100px;
+    font-size: 1.5rem;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #696b46;
+  }
+  
+  input[type="number"]:disabled {
+    background-color: #f0f0f0;
+  }
+  
+  /* Exibição do tempo */
+  .time-display {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #394736;
+  }
+  
+  /* Estilos dos botões */
+  .buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #b99555;
+    color: white;
+  }
+  
+  .buttons button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .buttons button:hover:enabled {
+    background-color: #a8462d;
+  }
+  
+  .buttons button:active:enabled {
+    background-color: #5c584c;
+  }
+  
+  /* Estilos do Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content h2 {
+    color: #a8462d; /* Cor do texto do modal */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .close-modal-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b99555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-modal-btn:hover {
+    background-color: #a8462d;
+  }
+  

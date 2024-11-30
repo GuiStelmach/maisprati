@@ -1,0 +1,66 @@
+/* Garante que o corpo ocupe toda a altura da tela e centraliza o conteúdo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Garante que o corpo ocupe toda a altura da janela de visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+  }
+  
+  .post-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    height: 80vh; /* Limita a altura do container para 80% da altura da tela */
+    overflow-y: auto; /* Permite rolar verticalmente se o conteúdo exceder a altura */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .post-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .post-item h2 {
+    color: #007bff;
+  }
+  
+  .reload-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .reload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .reload-button:focus {
+    outline: none;
+  }
+  

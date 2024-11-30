@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+  }
+/* Estilização geral do container */
+.timer-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    color: #3fd97f;
+  }
+  
+  /* Estilo do título */
+  .timer-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo do display do temporizador */
+  .timer-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ed6d4a;
+  }
+  
+  /* Botões */
+  .timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .timer-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botão de pausa */
+  .timer-button.pause {
+    background-color: #ffca64;
+    color: #fff;
+  }
+  
+  .timer-button.pause:hover {
+    background-color: #d4a952;
+  }
+  
+  /* Botão de reinício */
+  .timer-button.reset {
+    background-color: #ed6d4a;
+    color: #fff;
+  }
+  
+  .timer-button.reset:hover {
+    background-color: #c55337;
+  }
+  
+  /* Botão de início */
+  .timer-button.start {
+    background-color: #3fd97f;
+    color: #fff;
+  }
+  
+  .timer-button.start:hover {
+    background-color: #2fb765;
+  }
+  
