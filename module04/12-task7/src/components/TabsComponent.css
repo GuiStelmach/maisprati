@@ -1,0 +1,54 @@
+/* Estilos gerais do container de abas */
+.tabs-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #394736; /* Cor para as abas inativas */
+  }
+  
+  .tab:hover {
+    background-color: #b99555; /* Cor de hover */
+    color: white;
+  }
+  
+  .tab.active {
+    background-color: #a8462d; /* Cor da aba ativa */
+    color: white;
+    border-bottom: 4px solid #a8462d; /* Destaque visual para a aba ativa */
+  }
+  
+  .tab-content {
+    padding-top: 20px;
+  }
+  
+  .tab-pane {
+    display: block;
+  }
+  
+  .tab-pane h2 {
+    font-size: 1.8rem;
+    color: #394736;
+  }
+  
+  .tab-pane p {
+    font-size: 1rem;
+    color: #696b46;
+    line-height: 1.5;
+  }
+  

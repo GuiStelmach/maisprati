@@ -1,0 +1,180 @@
+/* Estilização do body para centralizar o conteúdo e aplicar fundo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #d3c8b4;
+    font-family: Arial, sans-serif;
+    color: #000;
+  }
+  
+  /* Container centralizado */
+  .todo-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff3db;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Estilização do título */
+  .todo-container h1 {
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  /* Entrada de texto para adicionar tarefas */
+  .todo-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .todo-input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #e7e4d5;
+    border-radius: 5px;
+    background-color: #fff3db;
+    color: #000;
+  }
+  
+  .add-task-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3fd97f;
+    color: #fff3db;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-task-button:hover {
+    background-color: #2fb765;
+  }
+  
+  /* Botão para alternar filtro */
+  .filter-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    color: #fff3db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button.show-all {
+    background-color: #ed6d4a;
+  }
+  
+  .filter-button.show-all:hover {
+    background-color: #c55337;
+  }
+  
+  .filter-button.show-pending {
+    background-color: #ffca64;
+  }
+  
+  .filter-button.show-pending:hover {
+    background-color: #d4a952;
+  }
+  
+  /* Lista de tarefas */
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e7e4d5;
+    border-radius: 5px;
+    background-color: #fff3db;
+  }
+  
+  .task-item.completed {
+    background-color: #3fd97f;
+    color: #fff3db;
+    text-decoration: line-through;
+  }
+  
+  /* Ações das tarefas */
+  .task-actions button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: #fff3db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-actions .toggle-button.mark {
+    background-color: #3fd97f;
+  }
+  
+  .task-actions .toggle-button.mark:hover {
+    background-color: #2fb765;
+  }
+  
+  .task-actions .toggle-button.unmark {
+    background-color: #ffca64;
+  }
+  
+  .task-actions .toggle-button.unmark:hover {
+    background-color: #d4a952;
+  }
+  
+  .task-actions .remove-button {
+    background-color: #ed6d4a;
+  }
+  
+  .task-actions .remove-button:hover {
+    background-color: #c55337;
+  }
+  
+  /* Mensagem de lista vazia */
+  .no-tasks-message {
+    margin-top: 20px;
+    color: #ed6d4a;
+  }
+  
+  /* Notificação */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #78a890;
+    color: #fff3db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1000;
+    animation: fade-in-out 3s ease-in-out;
+  }
+  
+  /* Animação para a notificação */
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    10%,
+    90% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
+  

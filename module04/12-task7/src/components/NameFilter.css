@@ -1,0 +1,64 @@
+/* Centraliza o container principal no meio da tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fff3db;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container do filtro */
+  .filter-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e1d2a9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  /* Estilo do título */
+  .filter-container h1 {
+    font-size: 1.8rem;
+    color: #332717;
+    margin-bottom: 20px;
+  }
+  
+  /* Campo de entrada */
+  .filter-input {
+    padding: 10px;
+    width: 90%;
+    font-size: 1rem;
+    border: 2px solid #e7e4d5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff3db;
+    color: #332717;
+  }
+  
+  /* Lista de nomes */
+  .name-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo dos itens da lista */
+  .name-item {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #e7e4d5;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #332717;
+  }
+  
+  /* Estilo para "Nenhum nome encontrado" */
+  .name-item.no-results {
+    font-style: italic;
+    color: #ed6d4a;
+  }
+  

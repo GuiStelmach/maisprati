@@ -1,0 +1,10 @@
+/* Estilos gerais para o conteúdo da aplicação */
+.content {
+  margin-top: 60px; /* Espaço suficiente para a Navbar */
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
